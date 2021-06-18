@@ -1,0 +1,12 @@
+public class Main
+{
+	public static void main(String[] args) {
+	    int[] arr = {10,12,13,14};
+	    int sum = 0;
+	    for(int i = 0;i<4;i++)
+	    {
+	        sum = sum + arr[i];
+	    }
+		System.out.println("sum of elements in a array : "+sum);
+	}
+}
