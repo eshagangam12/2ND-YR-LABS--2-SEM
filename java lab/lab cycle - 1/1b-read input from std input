@@ -1,0 +1,15 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    System.out.println("enter your name");
+		String name = s.next();
+		
+		System.out.println("hallticket number");
+		int rollnum = s.nextInt();
+		
+		System.out.println("name: "+name);
+		System.out.println("rollnum: "+rollnum);
+	}
+}
