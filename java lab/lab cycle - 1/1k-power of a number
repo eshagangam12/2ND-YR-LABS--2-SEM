@@ -1,0 +1,10 @@
+import java.lang.Math;
+public class Main
+{
+	public static void main(String[] args) {
+	    int n=2,m=3;
+	    double power;
+	    power = Math.pow(n,m);
+		System.out.println(power);
+	}
+}
