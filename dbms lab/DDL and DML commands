@@ -1,0 +1,37 @@
+create table businfo(busno int primary key,fromplace varchar(20),toplace varchar(20));
+insert into businfo values(101,'hyd','goa'),(102,'goa','chennai');
+select * from businfo;
+select fromplace from businfo;
+update businfo set fromplace = 'nzb'where toplace = 'chennai';
+select * from businfo;
+
+
+create table ticket(t_num int primary key,t_amount real,t_date date);
+
+insert into ticket values(513,90.00,'2021-04-13');
+insert into ticket values(514,100.00,'2021-04-12');
+insert into ticket values(515,120.00,'2021-04-11');
+select * from ticket;
+select t_num,t_amount,t_date from ticket;
+update ticket set t_date='2021-04-10' where t_num=513;
+delete from ticket where t_num=515;
+select * from ticket;
+alter table ticket drop t_amount;
+select * from ticket;
+
+
+
+create table passenger(p_id int primary key,p_name varchar(20),p_age int);
+
+insert into passenger values(1,'jessy',18);
+insert into passenger values(2,'Mercy',17);
+insert into passenger values(3,'Dia',16);
+insert into passenger values(4,'Romio',18);
+select * from passenger;
+select p_id,p_name,p_age from passenger;
+update passenger set p_name='San' where p_id = 1;
+update passenger set p_name = 'Kukkie' where p_id=2;
+delete from passenger where p_id=4;
+select * from passenger;
+
+
