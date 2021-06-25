@@ -1,0 +1,19 @@
+
+
+create table employee(empnum int primary key,emp_name varchar(25),age int default 23);
+insert into employee values(122,'roy',20);
+insert into employee values(434,'ross',18);
+insert into employee values(356,'harvey',null);
+insert into employee(empnum,emp_name) values (5647,'mike');
+select * from employee;
+
+create table student(rollnum int,stu_name varchar(25),check(rollnum>1));
+insert into student values(6,'specter');
+select * from student;
+
+create table student1(ht_num int primary key,name varchar(20));
+insert into student1 values(1,'elena'),(2,'caroline'),(3,'demon');
+create table event(evid int primary key,evname varchar(25),coor_id int,foreign key(coor_id) references student1(ht_num));
+insert into event values(13,'dance',1),(14,'singing',2),(15,'skit',3); 
+select * from student1;
+select * from event;
