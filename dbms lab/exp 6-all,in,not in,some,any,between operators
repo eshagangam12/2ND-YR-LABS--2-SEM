@@ -24,3 +24,6 @@ select * from customer where cust_id in(select cust_id from reservations);
 select cust_id,custname from customer where cust_id = any(select cust_id from reservations);
 select cust_id from customer where cust_id <> all(select cust_id from reservations);
 select cust_id from customer where cust_id = some(select cust_id from reservations);
+
+
+select cust_id from customer where cust_id < 4 union select cust_id from reservations where day = '2021-09-10';
