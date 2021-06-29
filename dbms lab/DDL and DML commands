@@ -35,3 +35,4 @@ delete from passenger where p_id=4;
 select * from passenger;
 
 
+
