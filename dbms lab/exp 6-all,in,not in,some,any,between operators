@@ -1,0 +1,26 @@
+create table customer(cust_id int primary key,custname varchar(25));
+insert into customer values(1,'roy');
+insert into customer values(2,'ross');
+insert into customer values(3,'harvey');
+insert into customer values(4,'mike');
+insert into customer values(5,'donna');
+insert into customer values(6,'louis');
+select * from customer;
+select custname as NAME from customer where cust_id in(3,6);
+select custname as NAME from customer where cust_id not in(1,2);
+select * from customer where cust_id between 3 and 6;
+
+create table reservations(res_id int primary key, cust_id int,day date,foreign key(cust_id) references customer(cust_id));
+insert into reservations values(101,1,'2021-05-02');
+insert into reservations values(102,2,'2021-06-05');
+insert into reservations values(103,3,'2021-07-07');
+insert into reservations values(104,4,'2021-08-08');
+insert into reservations values(105,5,'2021-09-10');
+select * from reservations;
+
+select * from customer where cust_id in(select cust_id from reservations);
+
+
+select cust_id,custname from customer where cust_id = any(select cust_id from reservations);
+select cust_id from customer where cust_id <> all(select cust_id from reservations);
+select cust_id from customer where cust_id = some(select cust_id from reservations);
